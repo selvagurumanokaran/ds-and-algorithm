@@ -1,6 +1,6 @@
 package com.geeks.guru.ds.treeiterator;
 
-public class BinaryTree {
+class BinaryTree {
 
 	private Node root;
 
