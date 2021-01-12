@@ -1,10 +1,8 @@
 package zolando;
 
-import org.junit.Assert;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.TemporalUnit;
 import java.util.Arrays;
 
 public class Solution {
@@ -68,10 +66,11 @@ public class Solution {
     public int nextGreatestElementWithSameDigitSumWithChar(int N) {
         String stringN = Integer.toString(N);
         int length = stringN.length();
-        Character[] charArr = new Character[length];
+        char[] charArr = stringN.toCharArray();
+        /*Character[] charArr = new Character[length];
         for (int i = 0; i < length; i++) {
             charArr[i] = stringN.charAt(i);
-        }
+        }*/
         int z = length - 1;
         while (charArr[z] == '0') --z;
         int b = z;
@@ -172,13 +171,11 @@ public class Solution {
             int actual = solution.nextGreatestElementWithSameDigitSumWithChar(i);
             System.out.println("For " + i + " -> " + actual);
             Assert.assertEquals(solution.nextGreatestElementDumb(i), actual);
-        }
+        }*/
         System.out.println(solution.nextGreatestElementWithSameDigitSum(29990));
+        char[] arr = {'a', 'b', 'c'};
+        /*
         System.out.println(solution.nextGreatestElementWithSameDigitSumWithChar(29990));*/
-        int[] C = {0, 1, 1};
 //        System.out.println(solution.constructMatrix(0, 2, C));
-        LocalDate now = LocalDate.now();
-        System.out.println(now.plusMonths(4));
-        System.out.println(now.plusMonths(4).format(DateTimeFormatter.ofPattern("dd/MMM/yy")));
     }
 }

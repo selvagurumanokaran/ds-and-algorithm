@@ -29,10 +29,15 @@ class Holdings {
     List<Holding> data;
 }
 
-class Price {
+class Price implements Cloneable {
     String date;
     String security;
     double price;
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 }
 
 class Prices {

@@ -1,6 +1,5 @@
 package com.geeks.guru.ds;
 
-import org.junit.Assert;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -49,19 +48,6 @@ public class TwoSumImpl implements TwoSum {
 
     public static void main(String[] args) {
 
-        TwoSum x = new TwoSumImpl();
-        Assert.assertFalse(x.test(2));
-        x.store(1);
-        Assert.assertFalse(x.test(2)); //--->F
-        x.store(3);
-        Assert.assertFalse(x.test(5));  //→ F
-        Assert.assertTrue(x.test(4)); //→ T
 
-
-        x.store(1);
-        x.store(1);
-        x.store(2);
-        x.store(0);
-        Assert.assertTrue(x.test(2)); //--->True
     }
 }
